@@ -19,7 +19,7 @@ export default function Home() {
                 <h1>Track Your Resume Feedback</h1>
                 <h2>Review your resume and get feedback using AI</h2>
             </div>
-        </section>
+
 
         {resumes.length > 0 && (
             <div className='resumes-section'>
@@ -28,5 +28,6 @@ export default function Home() {
                     ))}
             </div>
         )}
+        </section>
     </main>
 }
