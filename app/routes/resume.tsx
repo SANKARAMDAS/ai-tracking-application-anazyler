@@ -1,20 +1,16 @@
-import React, {useEffect, useState} from 'react'
 import {Link, useNavigate, useParams} from "react-router";
+import {useEffect, useState} from "react";
 import {usePuterStore} from "~/lib/puter";
 import Summary from "~/components/Summary";
 import ATS from "~/components/ATS";
+import Details from "~/components/Details";
 
 export const meta = () => ([
-    { title: "Smart Resume | Review" },
-    { name: 'description', content: 'Brief overview of your resume'},
+    { title: 'Resumind | Review ' },
+    { name: 'description', content: 'Detailed overview of your resume' },
 ])
 
-function Details(props: { feedback: Feedback }) {
-    return null;
-}
-
 const Resume = () => {
-
     const { auth, isLoading, fs, kv } = usePuterStore();
     const { id } = useParams();
     const [imageUrl, setImageUrl] = useState('');
@@ -54,8 +50,8 @@ const Resume = () => {
     }, [id]);
 
     return (
-        <main className='!pt-0'>
-            <nav className='resume-nav'>
+        <main className="!pt-0">
+            <nav className="resume-nav">
                 <Link to="/" className="back-button">
                     <img src="/icons/back.svg" alt="logo" className="w-2.5 h-2.5" />
                     <span className="text-gray-800 text-sm font-semibold">Back to Homepage</span>
@@ -79,7 +75,7 @@ const Resume = () => {
                     <h2 className="text-4xl !text-black font-bold">Resume Review</h2>
                     {feedback ? (
                         <div className="flex flex-col gap-8 animate-in fade-in duration-1000">
-                            <Summary feredback={feedback} />
+                            <Summary feedback={feedback} />
                             <ATS score={feedback.ATS.score || 0} suggestions={feedback.ATS.tips || []} />
                             <Details feedback={feedback} />
                         </div>
