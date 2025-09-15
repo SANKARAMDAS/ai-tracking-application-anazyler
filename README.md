@@ -2,13 +2,12 @@
 
 A modern, production-ready AI resume analyzer.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Analyzing resumes with AI(Puter.com)
-- 📦 Resume Review, ATS Score, and AI-powered feedback
+- ⚡️ Analyzing resumes with AI(Puter JS)
+- 📦 Resume Review, ATS Score, and AI-powered feedback(Puter.com)
 - 🔄 Data loading and mutations, even can erase all data from DB
 - 🔒 TypeScript by default
 - 🎉 TailwindCSS for styling
